@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Allan Johnson | Life Coach</title>
+  <style>
+    body, html {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 5px;
+    }
+    .logo span {
+      font-weight: normal;
+      font-size: 14px;
+      display: block;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+    .hero-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .hero-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+    .hero-text {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: black;
+    }
+    .hero-text p {
+      letter-spacing: 10px;
+      font-size: 14px;
+    }
+    .hero-text h1 {
+      font-size: 100px;
+      letter-spacing: 30px;
+      font-weight: 900;
+    }
+    .hero-text h3 {
+      font-weight: 300;
+      font-size: 20px;
+    }
+    .btn {
+      display: inline-block;
+      margin: 20px 10px 0;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      transition: 0.3s ease;
+      border: 2px solid black;
+    }
+    .btn.black {
+      background-color: black;
+      color: white;
+    }
+    .btn.black:hover {
+      background-color: white;
+      color: black;
+    }
+    .btn.outline {
+      background-color: white;
+      color: black;
+    }
+    .btn.outline:hover {
+      background-color: black;
+      color: white;
+    }
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+    .about-container .text-section {
+      flex: 1;
+      max-width: 600px;
+    }
+    .about-container h1 {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .about-container p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .image-section {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+    .image-section img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .services-section {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 80px 50px;
+      flex-wrap: wrap;
+      background: url('./image1.png') no-repeat center center;
+      background-size: cover;
+    }
+    .service-card {
+      background-color: rgba(255, 255, 255, 0.6);
+      border: 2px solid black;
+      padding: 30px 20px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      backdrop-filter: blur(4px);
+    }
+    .service-card h2 {
+      font-size: 20px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+    .service-card p {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .service-card hr {
+      width: 80px;
+      border-top: 2px solid black;
+      margin: 10px auto;
+    }
+    .service-card span {
+      display: block;
+      font-size: 14px;
+      margin: 5px 0;
+    }
+    .service-card button {
+      margin-top: 20px;
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    .service-card button:hover {
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+    }
+    footer {
+      background-color:#4fc1c0;
+      padding: 40px;
+    }
+    footer h4 {
+      margin-bottom: 20px;
+    }
+    footer pre {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    footer form input {
+      background-color:#4fc1c0;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid black;
+    }
+    footer form button {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">ALLAN JOHNSON<br><span>Personal Life Coach</span></div>
+    <nav>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Plans</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Guides</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Log In</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="hero-container">
+    <video autoplay muted loop>
+      <source src="WhatsApp Video 2025-06-05 at 14.21.27_c3211d1c.mp4" type="video/mp4">
+    </video>
+    <div class="hero-text">
+      <p>AMBITION IS THE FIRST STEP TOWARDS</p>
+      <h1>SUCCESS</h1>
+      <h3>Now Available for Online Coaching</h3>
+      <a href="#" class="btn black">Book Now</a>
+    </div>
+  </div>
+  <div class="about-container">
+    <div class="text-section">
+      <h1>ABOUT<br>ME</h1>
+      <p>I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</p>
+      <p>This is a great space to write long text about your company and your services.</p>
+      <a href="#" class="btn black">Read More</a>
+      <a href="#" class="btn outline">Free Consultation</a>
+    </div>
+    <div class="image-section">
+      <img src="./image2.png" alt="About Me">
+    </div>
+  </div>
+ <hr>
+  <h5 style="text-align:center; letter-spacing: 5px; font-size:40px;">HOW I CAN <br>HELP YOU</h5>
+  <div class="services-section">
+    <div class="service-card">
+      <h2>FREE<br>CONSULTATION</h2>
+      <p>Use this area to describe one of your services.</p>
+      <hr/>
+      <span>45 min</span><br><br><br><br>
+      <button>Book It</button>
+    </div>
+    <div class="service-card">
+      <h2>ONLINE<br>COACHING</h2>
+      <p>Use this area to describe one of your services.</p>
+      <hr />
+      <span>1 hr</span>
+      <span>$70</span><br><br><br>
+      <button>Book It</button>
+    </div>
+    <div class="service-card">
+      <h2>SELF-<br>IMPROVEMENT<br>WORKSHOP</h2>
+      <p>Use this area to describe one of your services.</p>
+      <hr />
+      <span>Mon-Fri</span>
+      <span>1 hr</span>
+      <span>$90</span><br>
+      <button>Book It</button>
+    </div>
+  </div>
+  <footer>
+    <h4><b>CONTACT</b></h4>
+    <pre>
+500 Terry Francine Street,
+San Francisco, CA 94158
+
+Tel: 123-456-7890
+Fax: 123-456-7890
+
+info@mysite.com
+
+© 2035 by Personal Life Coach. 
+Powered and secured by Wix
+    </pre> 
+    <form >
+      <label>Name *</label><br>
+      <input type="text" placeholder="Enter ur Name"><br>
+      <label>Email *</label><br>
+      <input type="email" placeholder="Email"><br>
+      <label>Subject *</label><br>
+      <input type="text" placeholder="Subject"><br>
+      <pre>
+          <label for="submit"><button type="submit">Submit</button></label>
+      </pre>     
+    </form>
+  </footer>
+</body>
+</html>
