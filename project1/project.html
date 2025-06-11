@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQUADFREE Style</title>
+  <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+  <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      background: url('./image0.png') no-repeat fixed;
+      
+    }
+
+    header {
+      background-color: rgba(114, 218, 234, 0.448);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #14a1c0;
+    }
+
+    .hero {
+      background:  url('./image1.png') no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 70px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-text {
+      color: white;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .hero-text h1 {
+      font-size: 500%;
+      margin-bottom: 10px;
+    }
+
+
+    .about-section {
+      background-color: white;
+      max-width: 100%;
+      margin: auto;
+      padding: 80px 50px;
+      display: flex;
+      flex-wrap: wrap; 
+      gap: 40px;
+    }
+
+
+    .about-left h1 {
+      font-size: 32px;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    .about-left p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .about-left button {
+      background-color: transparent;
+      border: 2px solid #59c7f2;
+      color: #59c7f2;
+      padding: 10px 24px;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 14px;
+    }
+
+    .about-left button:hover {
+      background-color: #59c7f2;
+      color: white;
+    }
+
+    .features-flex {
+      margin-top: 50px;
+      display:flex;
+      justify-content: center;
+      margin:30px;
+      gap:30px;
+    }
+
+    .feature-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+      
+    }
+
+    .feature-item img {
+      width: 36px;
+      height: 36px;
+      margin-bottom: 15px;  
+    }
+
+    .feature-item h3 {
+      font-size: 16px;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+
+    .feature-item p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .service-section {
+      padding: 60px 20px;
+      background: #f9f9f9;
+      text-align: center;
+    }
+
+    .service-intro h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .service-intro p {
+      font-size: 18px;
+      color: #555;
+      max-width: 600px;
+      margin: auto;
+      margin-bottom: 40px;
+    }
+
+    .service-boxes {
+      display: flex;
+      justify-content: center;
+      gap: 90px;
+    }
+
+    .service-box {
+      background: white;
+      color: #333;
+      width: 240px;
+      height: 260px;
+      padding: 30px 20px;
+      border-radius: 8px;
+      text-align: left;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .service-box img {
+      width: 35px;
+      margin-bottom: 20px;
+    }
+
+    .service-box h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .service-box p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .service-box:hover {
+      background-color: #59c7f2;
+      color: white;
+      transform: translateY(-8px);
+    }
+
+    .service-box:hover p {
+      color: white;
+    }
+
+    .cta-section {
+      padding:  50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .cta-content {
+      max-width: 800px;
+      color: white;
+    }
+    
+    .cta-content h2 {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .cta-content p {
+      font-size: 16px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    
+    .cta-content button {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 10px ;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .cta-content button:hover {
+      background-color: white;
+      color: #007BFF;
+    }
+
+  .card {
+        width: 300px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #fff;
+      }
+
+      .team-img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+        margin-bottom: 15px;
+      }
+
+      .card h3 {
+        margin: 10px 0 5px;
+        font-size: 20px;
+        color: #333;
+      }
+
+      .card p {
+        font-size: 14px;
+        color: #777;
+      }
+
+      .social-icons {
+        margin-top: 10px;
+      }
+
+      .social-icons a {
+        color: white;
+        background-color: #007bff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        margin: 0 5px;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+      }
+
+      .social-icons a:hover {
+        background-color: #0056b3;
+        transform: scale(1.1);
+      }
+
+      .team-img {
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .card:hover .team-img {
+        transform: scale(1.1);
+      }
+
+      .faq-container h1 {
+        margin:100px;
+        text-align: center;
+        color: #2f4d5a;
+        margin-bottom: 5px;
+      }
+
+      p.subheading {
+        text-align: center;
+        color: #2f4d5a;
+        margin-bottom: 40px;
+      }
+
+      .faq-container {
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      .question-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #4c9264;
+      }
+
+      .question-text {
+        width: 35%;
+        font-weight: bold;
+        color: #2f4d5a;
+      }
+
+      .wrapped-text {
+        width: 60%;
+        font-size: 16px;
+        line-height: 1.1;
+        color: #2f4d5a;
+        word-wrap: break-word;
+      }
+      .contact-container {
+        display: flex;
+        flex-wrap: wrap;
+        background: #fff;
+        max-width: 1100px;
+        margin: auto;
+        padding: 20px;
+      }
+      .contact-info,
+      .contact-form {
+        flex: 1;
+        min-width: 300px;
+        padding: 20px;
+      }
+      .contact-info h4 {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 5px;
+      }
+      .contact-info p {
+        font-size: 15px;
+        color: #140909;
+        margin: 0 0 20px;
+      }
+      .contact-info i {
+        margin-right: 10px;
+        color: #3a9fd9;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        font-size: 14px;
+      }
+      .contact-form button {
+        background: #51b3f1;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        font-size: 15px;
+        border-radius: 50px;
+        cursor: pointer;
+      }
+      iframe {
+        border: none;
+        width: 100%;
+        height: 200px;
+      }
+  </style>
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <header>
+    <div class="logo">SQUADFREE</div>
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Team</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>WELCOME TO SQUAD</h1>
+      <span>WE ARE TEAM OF TALENTED DESIGNERS MAKING WEBSITES WITH BOOTSTRAP</span>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <div class="about-left">
+      <h1>Voluptatem dignissimos provident quasi</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore odio voluptas quae. Necessitatibus est quam, sed quod architecto ducimus aspernatur placeat vitae! Quo ut eius dicta, maiores illum expedita vero eum, quidem, corrupti possimus dolor. Eos eius eveniet sed facere vel fugiat exercitationem minima repellendus! Unde labore quas dicta voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sunt, id magnam voluptates qui atque.
+      </p>
+      <button>ABOUT US ></button>
+    </div>
+
+    <div class="features-flex">
+      <div class="feature-item">
+        <img src="https://img.icons8.com/ios/50/briefcase--v1.png" alt="Briefcase Icon"/>
+        <h3>Corporis voluptates sit</h3>
+        <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+      </div>
+      <div class="feature-item">
+        <img src="https://img.icons8.com/ios/50/diamond--v1.png" alt="Diamond Icon"/>
+        <h3>Ullamco laboris nisi</h3>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+      </div>
+      <div class="feature-item">
+        <img src="https://img.icons8.com/ios/50/radar--v1.png" alt="Radar Icon"/>
+        <h3>Labore consequatur</h3>
+        <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+      </div>
+      <div class="feature-item">
+        <img src="https://img.icons8.com/ios/50/monitor--v1.png" alt="Monitor Icon"/>
+        <h3>Beatae veritatis</h3>
+        <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="service-section">
+    <div class="service-intro">
+      <h1>Services</h1>
+      <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    </div>
+    <div class="service-boxes">
+      <div class="service-box">
+        <img src="https://img.icons8.com/ios-filled/50/polyline.png" alt="Service Icon" />
+        <h2>Lorem Ipsum</h2>
+        <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+      </div>
+      <div class="service-box">
+        <img src="https://img.icons8.com/ios-filled/50/vector.png" alt="Service Icon" />
+        <h2>Sed ut perspici</h2>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+      </div>
+      <div class="service-box">
+        <img src="https://img.icons8.com/ios-filled/50/planner.png" alt="Service Icon" />
+        <h2>Magni Dolores</h2>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+      </div>
+      <div class="service-box">
+        <img src="https://img.icons8.com/ios-filled/50/wifi.png" alt="Service Icon" />
+        <h2>Nemo Enim</h2>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="cta-section">
+  <div class="cta-content">
+    <h2>Call To Action</h2>
+    <p>
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <button>Call To Action</button>
+  </div>
+</section>
+<div class="sanjay" style="background-color: white;padding:40px;">
+<div>
+      <h1
+        style="
+          font-family: Raleway, sans-serif;
+          position: relative;
+          top: -10px;
+          left: 670px;
+          color: #2f4d5a;
+        "
+      >
+        Team
+      </h1>
+      <p
+        style="
+          font-family: Raleway, sans-serif;
+          position: relative;
+          top: -10px;
+          left:400px;
+          color: #2f4d5a;
+        ">
+        Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+        consectetur velit
+      </p>
+      <div
+        class="team-section"
+        style="
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 40px;
+          margin-top: 40px;
+        "
+      >
+        <!-- Member 1 -->
+        <div class="card">
+          <img src="./image2.png" alt="Walter White" class="team-img" />
+          <h3>Walter White</h3>
+          <p>Chief Executive Officer</p>
+          <div class="social-icons">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Member 2 -->
+        <div class="card">
+          <img src="./image3.png" alt="Sarah Jhonson" class="team-img" />
+          <h3>Sarah Jhonson</h3>
+          <p>Product Manager</p>
+          <div class="social-icons">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="card">
+          <img src="./image4.png" alt="William Anderson" class="team-img" />
+          <h3>William Anderson</h3>
+          <p>CTO</p>
+          <div class="social-icons">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ <div class="faq-container" style="margin-bottom: 30px;">
+      <h1>Frequently Asked Questions</h1>
+      <p class="subheading">
+        Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+        consectetur velit
+      </p>
+
+      <div class="question-row">
+        <span class="question-text"
+          >Non consectetur a erat nam at lectus urna duis?</span
+        >
+        <span class="wrapped-text"
+          >Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat
+          lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla
+          urna porttitor rhoncus dolor purus non.</span
+        >
+      </div>
+
+      <div class="question-row">
+        <span class="question-text"
+          >Feugiat scelerisque varius morbi enim nunc faucibus a
+          pellentesque?</span
+        >
+        <span class="wrapped-text"
+          >Dolor sit amet consectetur adipiscing elit pellentesque habitant
+          morbi. Id interdum velit laoreet id donec ultrices. Fringilla
+          phasellus faucibus scelerisque eleifend donec pretium. Est
+          pellentesque elit ullamcorper dignissim.</span
+        >
+      </div>
+
+      <div class="question-row">
+        <span class="question-text"
+          >Dolor sit amet consectetur adipiscing elit pellentesque habitant
+          morbi?</span
+        >
+        <span class="wrapped-text"
+          >Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis
+          orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra
+          diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt.
+          Lectus urna duis convallis convallis tellus.</span
+        >
+      </div>
+
+      <div class="question-row">
+        <span class="question-text"
+          >Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</span
+        >
+        <span class="wrapped-text"
+          >Aperiam itaque sit optio et deleniti eos nihil quidem cumque.
+          Voluptas dolorum accusantium sunt sit enim. Provident consequuntur
+          quam aut reiciendis qui rerum dolorem sit odio. Repellat assumenda
+          soluta sunt pariatur error doloribus fuga.</span
+        >
+      </div>
+    </div>
+
+
+
+<div class="contact-container" style="display: flex;justify-content: center;padding-top: 100px;padding-right: 200px;">
+      <h1
+        style="
+          font-family: Raleway, sans-serif;
+          position: relative;
+          top: -40px;
+          left: 450px;
+          color: #2f4d5a;
+        "
+      >
+        Contact
+      </h1>
+      <div class="contact-info">
+        <h4 style="font-family: proxima nova">
+          <i class="bi bi-geo-alt"></i> 📍 Address
+        </h4>
+        <p>A108 Adam Street, New York, NY 535022</p>
+
+        <h4 style="font-family: proxima nova">
+          <i class="fa-phone-alt"></i> 📞 Call Us
+        </h4>
+        <p>+1 5589 55488 55</p>
+
+        <h4 style="font-family: proxima nova">
+          <i class="fa-envelope"></i> 📧 Email Us
+        </h4>
+        <p>info@example.com</p>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.859939643458!2d-74.01017928459265!3d40.71390657933183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a1782fb3899%3A0x546b4b7bc32beab3!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1628493641916!5m2!1sen!2sus"
+          allowfullscreen=""
+          loading="lazy"
+        >
+        </iframe>
+      </div>
+
+      <div class="contact-form">
+        <form>
+          <div style="display: flex; gap: 10px">
+            <input type="text" placeholder="Your Name" />
+            <input type="email" placeholder="Your Email" />
+          </div>
+          <input type="text" placeholder="Subject" />
+          <textarea rows="6" placeholder="Message"></textarea>
+          <button type="submit" style="position: relative; left: 200px">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+
+</div>    
+
+</body>
+</html>
+
+
+
